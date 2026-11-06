@@ -1,0 +1,18 @@
+$dockerignore = @'
+.git
+.github
+.venv
+venv
+__pycache__
+*.py[cod]
+*.md
+health_log.txt
+.env
+.env.*
+.gitignore
+.gitattributes
+Dockerfile
+docker-compose.yml
+'@
+
+[System.IO.File]::WriteAllText("$PWD\.dockerignore", $dockerignore + "`n", (New-Object System.Text.UTF8Encoding($false)))
