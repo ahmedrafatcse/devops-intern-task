@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 env:
-  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/devops-task-app
+  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME || github.repository_owner }}/devops-task-app
 
 jobs:
   lint:
