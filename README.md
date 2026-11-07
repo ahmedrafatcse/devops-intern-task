@@ -8,7 +8,7 @@ A minimal Flask application containerized with a multi-stage Docker build, publi
 ## Prerequisites
 
 - Git
-- Docker with Compose v2 (`docker compose`)
+- Docker with Compose v2 (`docker compose`); on older installs, use `docker-compose` instead
 - curl (for testing the application)
 - Bash and a Linux environment (for native execution of the health script)
 
@@ -31,7 +31,7 @@ curl http://localhost:8080
 Expected response:
 
 ```json
-{"message": "Hello from DevOps Intern Task!", "status": "running"}
+{"message":"Hello from DevOps Intern Task!","status":"running"}
 ```
 
 `docker compose up --build` runs in the foreground; press `Ctrl+C` to stop. Stop and remove the container with:
@@ -65,7 +65,7 @@ The disk threshold and log output path can be customized using the `DISK_THRESHO
 
 ### Sample output
 
-Normal operation — metrics below the threshold, no warning:
+Normal operation: metrics below the threshold, no warning:
 
 ```text
 [2026-11-06 16:11:31] CPU: 0.2% | MEM: 19.9% | DISK: 1%
